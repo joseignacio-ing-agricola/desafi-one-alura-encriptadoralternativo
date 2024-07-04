@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de Encriptación</title>
+    <link rel="stylesheet" href="style.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Resultado de Encriptación</h1> <!-- Título principal de la página -->
+        </header>
+        <main class="main-content">
+            <textarea id="original-text" placeholder="Texto original..." readonly></textarea> <!-- Área de texto para mostrar el texto original -->
+            <textarea id="output-text" placeholder="Texto desencriptado..." readonly></textarea> <!-- Área de texto para mostrar el texto desencriptado -->
+        </main>
+        <div class="buttons">
+            <button id="copy-button" class="action-button" aria-label="Copiar texto encriptado">Copiar</button> <!-- Botón para copiar el texto desencriptado -->
+        </div>
+    </div>
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>2024 creado por Jose Ignacio Farias</p> <!-- Información de autoría o créditos -->
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener parámetros de la URL (textoIngresado y textoEncriptado)
+            const urlParams = new URLSearchParams(window.location.search);
+            const textoIngresado = urlParams.get('textoIngresado'); // Obtener el texto original desde los parámetros de la URL
+            const textoEncriptado = urlParams.get('textoEncriptado'); // Obtener el texto encriptado desde los parámetros de la URL
+
+            // Elementos del DOM
+            const originalTextElement = document.getElementById('original-text'); // Elemento textarea para mostrar el texto original
+            const outputTextElement = document.getElementById('output-text'); // Elemento textarea para mostrar el texto encriptado/desencriptado
+
+            // Mostrar texto original y encriptado/desencriptado en las áreas de texto correspondientes
+            if (textoIngresado && textoEncriptado) {
+                originalTextElement.value = textoIngresado; // Mostrar texto original
+                outputTextElement.value = textoEncriptado; // Mostrar texto encriptado
+            } else {
+                originalTextElement.value = "Ningún mensaje fue encontrado..."; // Mensaje de error si no se encuentran los parámetros en la URL
+                outputTextElement.value = "Ningún mensaje fue encontrado..."; // Mensaje de error si no se encuentran los parámetros en la URL
+            }
+
+            // Funcionalidad del botón de copiar texto encriptado
+            const copyButton = document.getElementById('copy-button'); // Botón de copiar texto
+            copyButton.addEventListener('click', function() {
+                outputTextElement.select(); // Seleccionar todo el texto en el área de texto de salida
+                document.execCommand('copy'); // Ejecutar comando de copiado al portapapeles del navegador
+                alert('Texto copiado al portapapeles.'); // Mostrar alerta de confirmación de copiado
+            });
+        });
+    </script> <!-- Script para manejar la lógica de la página -->
+</body>
+</html>

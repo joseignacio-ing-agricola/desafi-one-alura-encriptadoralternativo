@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Aquí podría ir contenido adicional para la cabecera si fuera necesario -->
+        </header>
+        <main class="main-content">
+            <textarea id="input-text" placeholder="Ingresa el texto aquí..."></textarea> <!-- Área de texto para ingresar el texto a encriptar/desencriptar -->
+            <div class="image-container">
+                <img id="encrypt-image" src="img/muñeco.png" alt="Muñeco"> <!-- Imagen para representar el proceso de encriptación -->
+                <img id="decrypt-image" src="img/ningun-mensaje-fue-encontrado.png" alt="Ningún mensaje fue encontrado"> <!-- Imagen para representar el proceso de desencriptación -->
+            </div>
+        </main>
+        <div class="buttons">
+            <button id="encrypt-button" class="action-button" aria-label="Encriptar texto">Encriptar</button> <!-- Botón para encriptar el texto -->
+            <button id="decrypt-button" class="action-button" aria-label="Desencriptar texto">Desencriptar</button> <!-- Botón para desencriptar el texto -->
+        </div>
+    </div>
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>2024 creado por Jose Ignacio Farias</p> <!-- Información de autoría o créditos -->
+    </footer>
+    <script src="app.js"></script> <!-- Enlace al archivo JavaScript -->
+</body>
+</html>

@@ -1,0 +1,130 @@
+/* Variables globales */
+:root {
+    --background-color: #ffffff;   /* Color de fondo principal */
+    --main-color: #007acc;         /* Color principal */
+    --secondary-color: #005f80;    /* Color secundario */
+    --text-color: #000000;         /* Color de texto */
+}
+
+/* Estilos generales para el cuerpo y la estructura del contenedor */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255)
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el encabezado */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+/* Estilos para el contenido principal */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+textarea {
+    width: calc(50% - 10px);
+    margin: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    color: var(--text-color);
+    font-size: 1em;
+    resize: none;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.action-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 1em;
+    background-color: var(--main-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.image-container img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Estilos para el footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #222222;
+    color: #cccccc;
+    font-size: 0.9em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos específicos para resultados.html */
+#output-text {
+    width: calc(50% - 10px);
+    margin: 5px;
+}
+
+/* Estilos específicos para index.html */
+#input-text {
+    width: calc(50% - 10px);
+    margin-bottom: 0;
+}
+
+/* Estilos adicionales para dispositivos móviles */
+@media screen and (max-width: 600px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    textarea {
+        width: calc(100% - 20px);
+    }
+
+    .image-container {
+        margin: 10px 0;
+    }
+}
