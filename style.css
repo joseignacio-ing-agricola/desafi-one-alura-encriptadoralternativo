@@ -15,6 +15,17 @@ body {
     color: var(--text-color);
 }
 
+/* Estilos para la sección de logo */
+.logo {
+    text-align: left;
+    border: none;
+}
+  
+  /* Estilos para la imagen del logo */
+.logoImg {
+    width: auto; /* Ajuste del ancho de la imagen del logo */
+}
+  
 .container {
     max-width: 800px;
     margin: 50px auto;
