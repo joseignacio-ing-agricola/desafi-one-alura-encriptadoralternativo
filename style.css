@@ -57,7 +57,7 @@ textarea {
 .buttons {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin-top: 10px;
 }
 
@@ -84,7 +84,7 @@ textarea {
 }
 
 .image-container img {
-    max-width: 200px;
+    max-width: 50%;
     height: auto;
 }
 
